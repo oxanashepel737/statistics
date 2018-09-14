@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+<div *ngIf="token" class="text-center" >
+  <h1 class="h1">Feedback summary</h1>
+  <br>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Contact</th>
+      <th scope="col">Description</th>
+      <th scope="col">Rate</th>
+      <th scope="col">Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of items">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.contact}}</td>
+      <td>{{item.description}}</td>
+        <app-stars [count]=item.rate [url]=star></app-stars>
+      <td>{{item.date}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <ngb-pagination
+          class="d-flex justify-content-center"
+          [collectionSize]="collactionSize"
+          [(page)]="page" (pageChange) = "onPageChange($event)"
+          [pageSize] = "10" [boundaryLinks]="true">
+  </ngb-pagination>
+</div>
+  <app-props-modal [open]="!token" [message]="'You are not logged in'" [routerLink]="'/title'"></app-props-modal>
+</body>
+</html>

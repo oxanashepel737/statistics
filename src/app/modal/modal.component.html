@@ -1,0 +1,15 @@
+<div  *ngIf="errorService.error">
+<div id="exampleModalLong" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" style="padding-right: 17px; display: block;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>{{errorService.error}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-success" (click)="errorService.clear()"  [routerLink]="errorService.url">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop fade show"></div>
+</div>
