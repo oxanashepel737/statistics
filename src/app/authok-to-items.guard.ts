@@ -7,7 +7,7 @@ import {ModerService} from './moder.service';
 @Injectable({
   providedIn: 'root'
 })
-export class CanActivateGuard implements CanActivate {
+export class AuthokToItemsGuard implements CanActivate {
     constructor(private moderService:  ModerService, private router: Router) {}
   canActivate(
     next: ActivatedRouteSnapshot,

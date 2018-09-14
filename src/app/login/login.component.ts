@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModerService } from '../moder.service';
 import {Moder} from '../moder';
-import {ErrorService} from '../error.service';
+import {MessageService} from '../message.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ import {ErrorService} from '../error.service';
 })
 export class LoginComponent implements OnInit {
     moder: Moder = new Moder();
-  constructor(public moderService: ModerService , public errorService: ErrorService) { }
+  constructor(public moderService: ModerService , public errorService: MessageService) { }
   ngOnInit() {
   }
     public login(moder) {

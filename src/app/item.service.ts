@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {ajax} from 'rxjs/internal/observable/dom/ajax';
 import {ModerService} from './moder.service';
-import {ErrorService} from './error.service';
+import {MessageService} from './message.service';
 
 
 
@@ -18,7 +18,7 @@ export class ItemService {
      * */
     private static loadingPage: number = null;
 
-    constructor(public moderService: ModerService, private errorService: ErrorService) {
+    constructor(public moderService: ModerService, private errorService: MessageService) {
     }
 
     private load() {

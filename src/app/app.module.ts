@@ -13,7 +13,7 @@ import { StarsComponent } from './stars/stars.component';
 import { ModalComponent } from './modal/modal.component';
 import { CookieService } from 'ngx-cookie-service';
 import { PropsModalComponent } from './props-modal/props-modal.component';
-import {CanActivateGuard} from './can-activate.guard';
+import {AuthokToItemsGuard} from './authok-to-items.guard';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import {CanActivateGuard} from './can-activate.guard';
       NgbAlertModule,
       NgbModule
   ],
-  providers: [CookieService, CanActivateGuard],
+  providers: [CookieService, AuthokToItemsGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

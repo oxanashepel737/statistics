@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {ajax} from 'rxjs/internal/observable/dom/ajax';
 import {Moder} from './moder';
 import { CookieService } from 'ngx-cookie-service';
-import { ErrorService } from './error.service';
+import { MessageService } from './message.service';
 
 
 
@@ -11,7 +11,7 @@ import { ErrorService } from './error.service';
 })
 export class ModerService {
     protected static admin = null;
-    constructor(private cookieService: CookieService, private errorService: ErrorService) {
+    constructor(private cookieService: CookieService, private errorService: MessageService) {
 
   }
     public login(moder: Moder) {

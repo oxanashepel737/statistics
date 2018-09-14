@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {ErrorService} from '../error.service';
+import {MessageService} from '../message.service';
 
 
 @Component({
@@ -9,7 +9,7 @@ import {ErrorService} from '../error.service';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
-  constructor( public errorService: ErrorService ) { }
+  constructor( public errorService: MessageService ) { }
   ngOnInit() {
   }
 }
