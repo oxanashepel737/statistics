@@ -9,6 +9,18 @@
 <body>
 <div *ngIf="token" class="text-center" >
   <h1 class="h1">Feedback summary</h1>
+
+  <div class="container-fluid">
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" name = "contact" [(ngModel)]="contact" type="search" placeholder="contact" aria-label="Search">
+      <input class="form-control mr-sm-2"  name = "description" [(ngModel)]="description" type="search" placeholder="description" aria-label="Search">
+
+      <input class="form-control mr-sm-2" name = "rate" [(ngModel)]="rate" type="search" placeholder="rate" aria-label="Search">
+      <input class="form-control mr-sm-2" name = "date" [(ngModel)]="date" type="search" placeholder="date" aria-label="Search">
+
+      <button class="btn btn-outline-success" type="submit" (click)="onFilter()">Search</button>
+    </form>
+  </div>
   <br>
   <table class="table table-striped">
     <thead>

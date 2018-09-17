@@ -11,6 +11,10 @@ import {ModerService} from '../moder.service';
 })
 export class ItemsComponent implements OnInit {
     public page: number = this.itemService.current;
+    public contact  = '';
+    public description = '';
+    public rate = '';
+    public date = '';
     public data = [];
     public star = 'https://nomoreagent.com/img/star.png';
 
@@ -34,5 +38,9 @@ export class ItemsComponent implements OnInit {
 
     public onPageChange() {
         return this.itemService.setLoadingPage(this.page);
+    }
+    public onFilter() {
+        this.itemService.setFilter(this.contact, this.description, this.rate, this.date);
+        this.itemService.load();
     }
 }

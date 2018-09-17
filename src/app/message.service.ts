@@ -6,7 +6,6 @@ import {Injectable} from '@angular/core';
 export class MessageService {
     errors: string[] = [];
     urls: string[] = [];
-
     constructor() {
     }
 
